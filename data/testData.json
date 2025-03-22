@@ -1,0 +1,43 @@
+{
+  "URL" : "https://automationexercise.com/",
+  "Login" : {
+    "ValidCreditials" :
+    {
+      "Email": "sararamadan20005@gmail.com",
+      "UserName" : "Sara Ramadan",
+      "Password": "Mo7@medramadan"
+    },
+    "InvalidCreditials":
+    {
+
+      "Email": "Salma",
+      "Password": "456"
+    },
+    "InvalidPassword":
+    {
+      "Email": "mo",
+      "Password": "789"
+    }
+  },
+  "Signup" :
+  {
+    "Name" : "master",
+    "Email" : "master12@gmail.com",
+    "Password" : "Sar@Ramadan",
+    "FirstName" : "test",
+    "LastName" : "master",
+    "Company" : "TestWare",
+    "Address" : "Haram",
+    "Day" : "16" ,
+    "Month" : "8",
+    "Year" : "2001",
+    "Country" : "Canada",
+    "State" :"Cairo",
+    "City" : "Faisal",
+    "Zipcode" : "15987",
+    "MobileNumber" : "01022821833",
+    "AccountDeletedMsg" :"ACCOUNT DELETED!"
+
+
+  }
+}
