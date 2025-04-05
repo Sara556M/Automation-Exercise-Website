@@ -6,4 +6,5 @@ public class DataModel {
     public Login Login;
     public Signup Signup;
 
+
 }

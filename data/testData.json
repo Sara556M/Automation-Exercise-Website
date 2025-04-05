@@ -22,7 +22,17 @@
   "Signup" :
   {
     "Name" : "master",
-    "Email" : "master12@gmail.com",
+    "Email" :
+    {
+      "EmailIsValid":
+      {
+        "Email": "master@gmail.com"
+      },
+      "EmailIsNotValid" :
+      {
+        "Email": ["master","master@","master@."]
+      }
+    },
     "Password" : "Sar@Ramadan",
     "FirstName" : "test",
     "LastName" : "master",

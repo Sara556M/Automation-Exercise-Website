@@ -2,6 +2,7 @@ package signup;
 
 import base.BaseTests;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.*;
 
@@ -13,11 +14,24 @@ public class SignUpTests extends BaseTests {
     String userName;
     String deleteMsg ;
 
+    @DataProvider
+    private Object[] InaValidDataToSignUp() throws FileNotFoundException {
+        return dataModel().Signup.Email.EmailIsNotValid.Email;
+    }
+    @Test(dataProvider = "InaValidDataToSignUp")
+    public void signUpWithInvalidEmail(String mail) throws FileNotFoundException {
+
+        LoginPage loginPage =homePage.clickOnSignUpAndLoginButton();
+        loginPage.insertSignUpEmail(mail);
+        //loginPage.insertSignUpName(dataModel().Signup.Name);
+
+
+    }
     @Test
     public void signUpTest() throws FileNotFoundException {
         LoginPage loginPage =homePage.clickOnSignUpAndLoginButton();
         loginPage.insertSignUpName(dataModel().Signup.Name);
-        loginPage.insertSignUpEmail(dataModel().Signup.Email);
+        loginPage.insertSignUpEmail(dataModel().Signup.Email.EmailIsValid.Email);
         SignUpPage signUpPage =loginPage.clickOnSignUpButton();
         signUpPage.clickOnMrs();
         signUpPage.insertPassword(dataModel().Signup.Password);

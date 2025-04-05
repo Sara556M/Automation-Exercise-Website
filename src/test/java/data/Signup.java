@@ -2,7 +2,7 @@ package data;
 
 public class Signup {
      public String Name;
-     public String Email ;
+     public Email Email ;
      public String Password ;
      public String FirstName;
      public String LastName;
